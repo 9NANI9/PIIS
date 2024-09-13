@@ -1,0 +1,50 @@
+.buttons{
+
+}
+.imageContainer{
+
+}
+.titleContainer{
+    margin-bottom: 40px;
+}
+.buttonsContainer{
+
+}
+.upperLower{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+   
+}
+.content{
+    margin-left: 30px;
+}
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+}
+.button{
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: #0d0640;
+    width: 80px;
+    height: 40px;
+    margin-left: 10px;
+  
+
+}
+.annotation{
+    color:grey;
+}
+#price{
+    font-size: 30px;
+    font-weight: 700;
+    color:#0d0640;
+
+}
+#description{
+    font-weight: 600;
+    color:#0d0640;
+    font-size: 18px;
+}
