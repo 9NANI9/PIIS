@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини графический редактор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toolbar">
+        <label for="shape-select">Выберите фигуру:</label>
+        <select id="shape-select">
+            <option value="circle">Круг</option>
+            <option value="rectangle">Квадрат</option>
+            <option value="triangle">Треугольник</option>
+        </select>
+    </div>
+    <div id="drawing_area">
+        <svg id="drawing-area" width="800" height="600"></svg>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
