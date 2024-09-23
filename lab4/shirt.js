@@ -72,7 +72,7 @@ backButton.style.color="white"
 backButton.style.backgroundColor="#0d0640"
 backButton.addEventListener("click", () => {
     viewClicked="back"
-    img.src = shirt.colors[colorClicked].back; // Замените на нужный путь к изображению
+    img.src = shirt.colors[colorClicked].back
 });
 
 
