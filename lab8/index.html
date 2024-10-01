@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мини графический редактор</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CЛАБА 8</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="toolbar">
-        <label for="shape-select">Выберите фигуру:</label>
-        <select id="shape-select">
-            <option value="circle">Круг</option>
-            <option value="rectangle">Квадрат</option>
-            <option value="triangle">Треугольник</option>
-        </select>
-    </div>
-    <canvas id="drawing-area" width="800" height="600"></canvas>
-    
+    <select id="shape-select">
+        <option value="rectangle">Прямоугольник</option>
+        <option value="circle">Круг</option>
+        <option value="triangle">Треугольник</option>
+    </select>
+    <canvas id="background-canvas" width="800" height="600"></canvas>
+    <canvas id="drawing-canvas" width="800" height="600"></canvas>
+
     <script src="script.js"></script>
 </body>
 </html>

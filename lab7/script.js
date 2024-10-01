@@ -16,8 +16,8 @@ svg.addEventListener('mousemove', (event) => {
     const currentX = event.offsetX;
     const currentY = event.offsetY;
 
-    // Удаляем предыдущие фигуры, если нужно
-    svg.innerHTML = '';
+
+    //svg.innerHTML = '';
 
     const shape = shapeSelect.value;
     if (shape === 'circle') {
@@ -32,14 +32,13 @@ svg.addEventListener('mousemove', (event) => {
         const width = currentX - startX;
         const height = currentY - startY;
         const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-        rect.setAttribute('x', startX);
-        rect.setAttribute('y', startY);
-        rect.setAttribute('width', width);
-        rect.setAttribute('height', height);
+        rect.setAttribute('x', width < 0 ? currentX : startX);
+        rect.setAttribute('y', height < 0 ? currentY : startY);
+        rect.setAttribute('width', Math.abs(width));
+        rect.setAttribute('height', Math.abs(height));
         rect.setAttribute('fill', 'rgba(255, 150, 0, 0.5)');
         svg.appendChild(rect);
-    }
-    else if(shape === 'triangle'){
+    } else if (shape === 'triangle') {
         const points = `${startX},${startY} ${currentX},${currentY} ${startX},${currentY}`;
         const triangle = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
         triangle.setAttribute('points', points);
